@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table border="" width="100%" style="text-align:center">
+        <td><a href="/homestu">view student</a></td>
+        <td><a href="/viewresult">view Result</a></td>
+        <td><a href="/resultstd">std wise Result</a></td>
+        <td><a href="/logout">log out</a></td>
+    </table>
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>Student Name</th>
+            <th>Roll no</th>
+            <th>Std</th>
+            <th>Div</th>
+            <th>Result</th>
+            <th> viewResult</th>
+        </tr>
+        <%result.forEach(function(data){%>
+            <tr>
+                <td><%= data.id %></td>
+                <td><%= data.name %></td>
+                <td><%= data.rollno %></td>
+                <td><%= data.std %></td>
+                <td><%= data.division %></td>
+                <td><a href="/addresult/<%= data.id %>">Add Result</a></td>
+                <td><a href="/viewresult/<%= data.id %>">view Result</a></td>
+            </tr>
+        <% });%>
+    </table>
+
+
+</body>
+
+</html>

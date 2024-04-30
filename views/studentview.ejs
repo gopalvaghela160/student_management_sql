@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View std</title>
+</head>
+<body>
+
+    <form method="post">
+        <tr>
+            <td>Std:</td>
+            <td><input type="text" name="std"></td>
+        </tr>
+        <tr>
+            <td>Div:</td>
+            <td><input type="text" name="div"></td>
+        </tr>
+        <tr>
+            <td>
+                <td><input type="submit" name="search" value="search"></td>
+            </td>
+        </tr>
+    </form>
+
+    <table border="">
+        <tr>
+            <th>Id</th>
+            <th>Roll No</th>
+            <th>Student Name</th>
+            <th>Standard</th>
+            <th>Divison</th>
+            <th>Result</th>
+            
+        </tr>
+            <% result.forEach(function(data) { %>
+                <tr>
+                    <td><%= data.id %></td>
+                    <td><%= data.rno %></td>
+                    <td><%= data.name %></td>
+                    <td><%= data.std %></td>
+                    <td><%= data.divi %></td>
+                    <td><a href="/addresult/<%= data.id%>">Add Result</a></td>
+                </tr>
+            <% }); %>
+    </table>
+    
+</body>
+</html>

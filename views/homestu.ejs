@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table border="">
+        <tr>
+            <th>Id </th>
+            <th>Roll no </th>
+            <th>Name </th>
+            <th>std</th>
+            <th>div</th>
+            <th>Result</th>
+        </tr>
+        <tr>
+            <% result.forEach(function(data){%>
+        <tr>
+            <td>
+                <%= data.id%>
+            </td>
+            <td>
+                <%= data.rollno%>
+            </td>
+            <td>
+                <%= data.name%>
+            </td>
+            <td>
+                <%= data.std%>
+            </td>
+            <td>
+                <%= data.division%>
+            </td>
+            <td>
+                <a href="/addresult<%= data.id %>"></a>
+            </td>
+        </tr>
+        <% });%>
+            </tr>
+    </table>
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Result</title>
+</head>
+<body>
+
+    <% result.forEach(function(data) { %>
+    
+    <form method="post">
+        <tr>
+            <td>Roll No:</td>
+            <input type="text" name="rno" value="<%= data.rollno %>"><br>
+        </tr>
+        <tr>
+            <td>Student Name:</td>
+            <input type="text" name="name" value="<%= data.name %>"><br>
+        </tr>
+        <tr>
+            <td>Std:</td>
+            <input type="text" name="std" value="<%= data.std %>"><br>
+        </tr>
+        <tr>
+            <td>Div:</td>
+            <input type="text" name="div" value="<%= data.division %>"><br>
+        </tr>
+        <% }); %>
+        <tr>
+            <td>Sub 1:</td>
+            <td><input type="text" name="s1"></td><br>
+        </tr>
+        <tr>
+            <td>Sub 2:</td>
+            <td><input type="text" name="s2"></td><br>
+        </tr>
+        <tr>
+            <td>Sub 3:</td>
+            <td><input type="text" name="s3"></td><br>
+        </tr>
+        <tr>
+            <td>Sub 4:</td>
+            <td><input type="text" name="s4"></td><br>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" name="addresult" value="Add Result"></td>
+        </tr>
+    </form>
+    
+
+
+</body>
+</html>

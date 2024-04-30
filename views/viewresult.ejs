@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table> 
+        <tr>
+            <th>Id</th>
+            <th>std</th>
+            <th>Div</th>
+            <th>Roll no</th>
+            <th>Name</th>
+            <th>sub 1</th>
+            <th>sub 2</th>
+            <th>sub 3</th>
+            <th>sub 4</th>
+            <th>Total</th>
+            <th>Per</th>
+            <th>update</th>
+            <th>Delete</th>
+        </tr>
+
+        <% result.forEach(function(data) { %>
+            <tr>
+                <td><%= data.id %></td>
+                <td><%= data.std %></td>
+                <td><%= data.divi %></td>
+                <td><%= data.rollno %></td>
+                <td><%= data.name %></td>
+                <td><%= data.s1 %></td>
+                <td><%= data.s2 %></td>
+                <td><%= data.s3 %></td>
+                <td><%= data.s4 %></td>
+                <td><%= data.total %></td>
+                <td><%= data.per %></td>
+                <td><a href="/updateres/<%= data.id %> ">Update</a></td>
+                <td><a href="/deleteres/<%= data.id %> ">Delete</a></td>
+            </tr>
+            <% }); %>
+    </table>
+    
+</body>
+</html>

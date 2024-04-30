@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="post">
+        <table>
+            <tr>
+                <td>Roll no :</td>
+                <td><input type="rno" name="rno"></td>
+            </tr>
+            <tr>
+                <td>student name :</td>
+                <td><input type="name" name="name"></td>
+            </tr>
+            <tr>
+                <td>std :</td>
+                <td>
+                    <select name="std">
+                    <% result.forEach(function(data){%>
+                        <option value="<%= data.std %>"><%= data.std %></option>
+                    <%});%>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Div :</td>
+                <td><select name="division">
+                    <% result1.forEach(function(data){%>
+                        <option value="<%= data.division %>"><%= data.division %></option>
+                    <%});%>
+                    </select></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="Add student"></td>
+            </tr>
+
+        </table>
+    </form>
+    
+</body>
+</html>

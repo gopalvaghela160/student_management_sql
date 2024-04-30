@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top 3</title>
+</head>
+<body>
+
+    <form method="post">
+        <tr>
+            <td>Std:</td>
+            <td><input type="text" name="std"></td>
+        </tr>
+        <tr>
+            <td>Div:</td>
+            <td><input type="text" name="div"></td>
+        </tr>
+        <tr>
+            <td>
+                <td><input type="submit" name="search" value="search"></td>
+            </td>
+        </tr>
+    </form>
+
+    <table border="">
+        <tr>
+            <th>Id</th>
+            <th>Student Name</th>
+            <th>Standard</th>
+            <th>Divison</th>
+            <th>Sub 1</th>
+            <th>Sub 2</th>
+            <th>Sub 3</th>
+            <th>Sub 4</th>
+            <th>Total</th>
+            <th>Per</th>
+        </tr>
+
+
+            <% result.forEach(function(data) { %>
+                <tr>
+                    <td><%= data.id %></td>
+                    <td><%= data.name %></td>
+                    <td><%= data.std %></td>
+                    <td><%= data.division %></td>
+                    <td><%= data.s1 %></td>
+                    <td><%= data.s2 %></td>
+                    <td><%= data.s3 %></td>
+                    <td><%= data.s4 %></td>
+                    <td><%= data.total %></td>
+                    <td><%= data.per %></td>
+                </tr>
+            <% }); %>
+
+    </table>
+    
+</body>
+</html>

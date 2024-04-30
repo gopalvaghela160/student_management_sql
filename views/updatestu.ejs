@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Studnent</title>
+</head>
+<body>
+
+    <% result.forEach(function(data) { %>
+
+    <form method="post">
+        <tr>
+            <td>Roll No:</td>
+            <td><input type="text" name="rno" value="<%= data.rno %>"></td><br>
+        </tr>
+        <tr>
+            <td>Studnet Name:</td>
+            <td><input type="text" name="name" value="<%= data.name %>"></td><br>
+        </tr>
+        <tr>
+            <td>std:</td>
+            <td>
+                <select name="std" id="">
+                    <% result.forEach(function(data){ %>
+                        <option value="<%= data.std%>">
+                            <%= data.std%>
+                        </option>
+                        <% }); %>
+                </select>
+            </td><br>
+        </tr>
+        <tr>
+            <td>Div:</td>
+            <td>
+                <select name="div" id="">
+                    <% result1.forEach(function(data){ %>
+                        <option value="<%= data.divi%>">
+                            <%= data.divi%>
+                        </option>
+                        <% }); %>
+                </select>
+            </td><br>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" name="addstudnet" value="Add Student"></td>
+        </tr>
+    </form>
+    <% }); %>
+    
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Staff</title>
+</head>
+
+<body>
+
+    <% result.forEach(function(data) { %>
+
+        <form method="post">
+            <tr>
+                <td>Teacher Name:</td>
+                <td><input type="text" name="name" value="<%= data.name%>"></td><br>
+            </tr>
+            <tr>
+                <td>Teacher Email:</td>
+                <td><input type="email" name="email" value="<%= data.email%>"></td><br>
+            </tr>
+            <tr>
+                <td>Teacher Password:</td>
+                <td><input type="password" name="password" value="<%= data.password %>"></td><br>
+            </tr>
+            <tr>
+                <td>std:</td>
+                <td>
+                    <select name="std" id="">
+                        <% result2.forEach(function(data){ %>
+                            <option value="<%= data.std%>">
+                                <%= data.std%>
+                            </option>
+                            <% }); %>
+                    </select>
+                </td><br>
+            </tr>
+            <tr>
+                <td>Div:</td>
+                <td>
+                    <select name="div" id="">
+                        <% result1.forEach(function(data){ %>
+                            <option value="<%= data.divi%>">
+                                <%= data.divi%>
+                            </option>
+                            <% }); %>
+                    </select>
+                </td><br>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" name="addstaff" value="Add Staff"></td>
+            </tr>
+        </form>
+
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Result</title>
+</head>
+<body>
+
+    <% result.forEach(function(data) { %>
+    
+    <form method="post">
+       
+        
+
+
+        <tr>
+            <td>Sub 1:</td>
+            <td><input type="text" name="s1" value="<%= data.s1 %>"></td><br>
+        </tr>
+        <tr>
+            <td>Sub 2:</td>
+            <td><input type="text" name="s2" value="<%= data.s2 %>"></td><br>
+        </tr>
+        <tr>
+            <td>Sub 3:</td>
+            <td><input type="text" name="s3" value="<%= data.s3 %>"></td><br>
+        </tr>
+        <tr>
+            <td>Sub 4:</td>
+            <td><input type="text" name="s4" value="<%= data.s4 %>"></td><br>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" name="addresult" value="Add Result"></td>
+        </tr>
+    </form>
+    <% }); %>
+
+
+</body>
+</html>
